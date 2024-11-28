@@ -34,6 +34,7 @@ h3 {
 
 
 /* Estilo general del contenedor de frutas */
+/* Estilo general del contenedor de frutas */
 .contenedor-frutales {
   background-color: gray;
   padding: 20px;
@@ -64,9 +65,9 @@ h3 {
 
 /* Estilo para las imágenes dentro de las cajas */
 .caja img {
-  width: 100%;     /* Asegura que la imagen ocupe el 100% del ancho de la caja */
-  height: auto;    /* Mantiene la proporción de la imagen */
-  object-fit: contain; /* Asegura que la imagen se ajuste dentro del contenedor sin deformarse */
+  width: 70px;    /* Ancho fijo de la imagen */
+  height: 70px;   /* Altura fija de la imagen */
+  object-fit: contain; /* Mantiene la proporción de la imagen */
   display: block;
   margin: 0 auto;   /* Centra la imagen dentro de la caja */
 }
@@ -83,7 +84,8 @@ h3 {
     max-width: 100%; /* Asegura que no haya límite de ancho en móviles */
   }
   .caja img {
-    max-width: 100%; /* Asegura que la imagen no se desborde en pantallas pequeñas */
+    width: 70px;    /* Ancho fijo de la imagen */
+    height: 70px;   /* Altura fija de la imagen */
   }
 }
 

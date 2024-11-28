@@ -32,6 +32,7 @@ h3 {
 }
 
 
+
 .contenedor-frutales {
   background-color: gray;
   padding: 20px;
@@ -40,8 +41,9 @@ h3 {
   justify-content: center; 
   align-items: center;
   flex-wrap: wrap; 
-  gap: 20px; 
+  gap: 20px;
 }
+
 
 .caja {
   background-color: bisque;
@@ -49,19 +51,23 @@ h3 {
   border: 2px solid #ccc;
   border-radius: 8px;
   text-align: center;
-  height: 350px; 
+  box-sizing: border-box;
+  height: auto;
+  width: 100%; 
+  max-width: 300px; 
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
   word-wrap: break-word; 
   margin: 10px;
-  box-sizing: border-box; 
 }
+
+
 .caja img {
-  width: 100%;    
-  max-width: 250px; 
-  height: auto;   
+  width: 100%;     
+  max-width: 200px;
+  height: auto;     
   display: block;
-  margin: 0 auto; 
+  margin: 0 auto;   
 }
 
 
@@ -73,20 +79,6 @@ h3 {
 @media (min-width: 1024px) {
   .caja {
     width: calc(33.33% - 20px); 
-  }
-}
-
-
-@media (max-width: 1024px) {
-  .caja {
-    width: calc(50% - 20px);
-  }
-}
-
-
-@media (max-width: 768px) {
-  .caja {
-    width: 100%; 
   }
 }
 

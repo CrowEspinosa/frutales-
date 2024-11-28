@@ -56,6 +56,12 @@ h3 {
   margin: 10px;
   box-sizing: border-box; /* Asegura que el padding no sume al tamaño total */
 }
+.caja img {
+  max-width: 100%;  /* Esto asegura que la imagen nunca se desborde del contenedor */
+  height: auto;     /* Mantiene la proporción original de la imagen */
+  display: block;   /* Elimina espacio extra debajo de la imagen */
+  margin: 0 auto;   /* Centra la imagen horizontalmente */
+}
 
 /* Efecto al pasar el ratón */
 .caja:hover {

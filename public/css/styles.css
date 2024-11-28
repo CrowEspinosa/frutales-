@@ -23,7 +23,7 @@ h3 {
   padding: 15px;
 }
 
-/* Fondo general y estilo de la página */
+
 body {
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
@@ -35,10 +35,10 @@ body {
   padding: 20px;
   border: 2px solid black;
   display: flex;
-  justify-content: center; /* Centra las cajas horizontalmente */
-  align-items: center; /* Centra las cajas verticalmente */
-  flex-wrap: wrap; /* Permite que las cajas se acomoden en nuevas filas si es necesario */
-  gap: 20px; /* Añade espacio entre las cajas */
+  justify-content: center; 
+  align-items: center; 
+  flex-wrap: wrap; 
+  gap: 20px;
 }
 
 .caja {
@@ -47,39 +47,39 @@ body {
   border: 2px solid #ccc;
   border-radius: 8px;
   text-align: center;
-  min-width: 45%; /* Esto asegura que dos cajas grandes puedan estar en una fila */
-  max-width: 45%; /* Evita que las cajas se hagan demasiado grandes */
+  min-width: 45%; 
+  max-width: 45%; 
   height: 350px; 
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
   word-wrap: break-word; 
   margin: 10px;
-  box-sizing: border-box; /* Asegura que el padding no sume al tamaño total */
+  box-sizing: border-box; 
 }
 
-/* Efecto al pasar el ratón */
+
 .caja:hover {
   transform: scale(1.05);
 }
 
-/* Ajustes para pantallas medianas */
+
 @media (max-width: 768px) {
   .caja {
-    width: calc(50% - 30px); /* Dos cajas por fila en pantallas medianas */
+    width: calc(50% - 30px); 
   }
 }
 
 @media (max-width: 480px) {
   .caja {
-    width: 100%; /* Una caja por fila en pantallas pequeñas */
+    width: 100%; 
   }
 }
 
-/* Barra de búsqueda */
+
 .contenedor {
   display: flex;
-  justify-content: flex-start; /* Alinea el contenido a la izquierda */
-  padding: 20px; /* Espacio de relleno para el ejemplo */
+  justify-content: flex-start; 
+  padding: 20px; 
 }
 
 .agregar-valoracion {

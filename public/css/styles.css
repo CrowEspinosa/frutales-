@@ -1,93 +1,148 @@
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+/* Estilos generales */
+* {
   margin: 0;
   padding: 0;
-}
-h1{
-  background-color: rgb(99, 35, 72);
-  color: aliceblue;
-  margin: 15px;
-  padding: 20px;
-  text-align: center;
+  box-sizing: border-box;
 }
 
-h3{
-  color: rgb(241, 241, 241);
-  text-align: center;
-  border-radius: 30px;
-  background-color: rgb(148, 148, 148);
-  margin: 20px;
-  padding: 15px;
-}
-
-/* Fondo general y estilo de la página */
 body {
   font-family: Arial, sans-serif;
+  line-height: 1.5;
   background-color: #f4f4f4;
+  color: #333;
   padding: 20px;
 }
 
-
-.contenedor-frutales {
-  background-color: gray;
+.container {
+  width: 100%;
+  max-width: 1200px; /* Límite del ancho máximo */
+  margin: 0 auto; /* Centrado automático */
   padding: 20px;
-  border: 2px solid black;
+}
+
+h1, h2, h3, h4 {
+  margin-bottom: 20px;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+/* Usar Flexbox para un diseño flexible */
+.flex-container {
   display: flex;
-  justify-content: center; /* Centra las cajas horizontalmente */
-  align-items: center; /* Centra las cajas verticalmente */
-  flex-wrap: wrap; /* Permite que las cajas se acomoden en nuevas filas si es necesario */
-  gap: 20px; /* Añade espacio entre las cajas */
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
 }
 
-.caja {
-  background-color: bisque;
+/* Estilo de las cajas */
+.box {
+  flex: 1 1 calc(33.33% - 20px); /* 3 elementos por fila en pantallas grandes */
+  background-color: #fff;
   padding: 20px;
-  border: 2px solid #ccc;
   border-radius: 8px;
-  text-align: center;
-  min-width: 45%; /* Esto asegura que dos cajas grandes puedan estar en una fila */
-  max-width: 45%; /* Evita que las cajas se hagan demasiado grandes */
-  height: 350px; 
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-  word-wrap: break-word; 
-  margin: 10px;
-  box-sizing: border-box; /* Asegura que el padding no sume al tamaño total */
 }
 
-
-/* Efecto al pasar el ratón */
-.caja:hover {
-  transform: scale(1.05);
+.box img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
 }
 
-/* Ajustes para pantallas medianas */
-@media (max-width: 768px) {
-  .caja {
-    width: calc(50% - 30px); /* Dos cajas por fila en pantallas medianas */
-  }
+/* Botones */
+button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-@media (max-width: 480px) {
-  .caja {
-    width: 100%; /* Una caja por fila en pantallas pequeñas */
-  }
+button:hover {
+  background-color: #45a049;
 }
-/* barra de busqueda */
-.contenedor {
+
+/* Formulario */
+form {
   display: flex;
-  justify-content: flex-start; /* Alinea el contenido a la derecha */
-  padding: 20px; /* Espacio de relleno para el ejemplo */
+  flex-direction: column;
 }
 
-.agregar-valoracion{
-  text-align: center;
+input, textarea {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
-.lista-valoraciones{
-  background-color: rgb(254, 255, 212);
-  padding: 30px;
+input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* Media Queries: para tamaños de pantalla más pequeños */
+
+/* Para pantallas de tamaño pequeño, como teléfonos móviles */
+@media screen and (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  .container {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .flex-container {
+    flex-direction: column; /* Apilar los elementos verticalmente en pantallas pequeñas */
+    align-items: center;
+  }
+
+  .box {
+    flex: 1 1 100%; /* Cada caja ocupa el 100% del ancho disponible */
+    margin-bottom: 20px;
+  }
+
+  input, textarea {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+
+/* Para pantallas medianas, como tabletas */
+@media screen and (max-width: 1024px) {
+  .box {
+    flex: 1 1 calc(50% - 20px); /* 2 elementos por fila */
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+}
+
+/* Para pantallas grandes, como escritorios o laptops grandes */
+@media screen and (min-width: 1025px) {
+  .box {
+    flex: 1 1 calc(33.33% - 20px); /* 3 elementos por fila */
+  }
+
+  h1 {
+    font-size: 32px;
+  }
 }

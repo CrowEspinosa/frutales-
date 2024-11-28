@@ -1,4 +1,4 @@
-/* Estilos generales */
+
 *,
 *::before,
 *::after {
@@ -31,16 +31,16 @@ h3 {
   padding: 15px;
 }
 
-/* Contenedor de las cajas */
+
 .contenedor-frutales {
   background-color: gray;
   padding: 20px;
   border: 2px solid black;
   display: flex;
-  justify-content: center; /* Centra las cajas horizontalmente */
-  align-items: center; /* Centra las cajas verticalmente */
-  flex-wrap: wrap; /* Permite que las cajas se acomoden en nuevas filas si es necesario */
-  gap: 20px; /* Añade espacio entre las cajas */
+  justify-content: center; 
+  align-items: center;
+  flex-wrap: wrap; 
+  gap: 20px; 
 }
 
 .caja {
@@ -54,45 +54,45 @@ h3 {
   transition: transform 0.3s ease;
   word-wrap: break-word; 
   margin: 10px;
-  box-sizing: border-box; /* Asegura que el padding no sume al tamaño total */
+  box-sizing: border-box; 
 }
 .caja img {
-  max-width: 100%;  /* Esto asegura que la imagen nunca se desborde del contenedor */
-  height: auto;     /* Mantiene la proporción original de la imagen */
-  display: block;   /* Elimina espacio extra debajo de la imagen */
-  margin: 0 auto;   /* Centra la imagen horizontalmente */
+  max-width: 100%;  
+  height: auto;     
+  display: block;   
+  margin: 0 auto;   
 }
 
-/* Efecto al pasar el ratón */
+
 .caja:hover {
   transform: scale(1.05);
 }
 
-/* Para pantallas grandes (PC y tabletas grandes) */
+
 @media (min-width: 1024px) {
   .caja {
-    width: calc(33.33% - 20px); /* Tres cajas por fila en pantallas grandes */
+    width: calc(33.33% - 20px); 
   }
 }
 
-/* Para pantallas medianas (tabletas) */
+
 @media (max-width: 1024px) {
   .caja {
-    width: calc(50% - 20px); /* Dos cajas por fila en pantallas medianas */
+    width: calc(50% - 20px);
   }
 }
 
-/* Para pantallas pequeñas (móviles) */
+
 @media (max-width: 768px) {
   .caja {
-    width: 100%; /* Una caja por fila en pantallas pequeñas */
+    width: 100%; 
   }
 }
 
-/* Barra de búsqueda */
+
 .contenedor {
   display: flex;
-  justify-content: flex-start; /* Alinea el contenido a la derecha */
+  justify-content: flex-start;
   padding: 20px;
 }
 
